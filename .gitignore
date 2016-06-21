@@ -1,0 +1,8 @@
+Debug/
+x64/
+*.opensdf
+*.sdf
+*.suo
+*.VC.db
+*.VC.opendb
+lib/shaderc/
