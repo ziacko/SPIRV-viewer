@@ -45,9 +45,6 @@ static int activeDescsetItem = 0;
 static int activeDesclayoutItem = 0;
 static int activeDescBindingItem = 0;
 
-
-static char textBox[textBoxSize];
-
 static ImVec4 favColor = ImVec4(0.067f, 0.765f, 0.941f, 1.0f);
 
 // -------------------------------------------------------- Helpers -----------------------------------------------
@@ -268,7 +265,38 @@ void shaderTool_t::DrawMeta()
 void shaderTool_t::DrawShaderTypes()
 {
 	ImGui::TextColored(favColor, "%s:", "Shader module type");
-	auto blarg = ImGui::ListBox((string("##") + "Shader Module").c_str(), &activeModuleItem, CStrList(shaderModuleTypes).data(), shaderModuleTypes.size());
+	switch (shaderModuleType)
+	{
+	case shaderModuleType_t::vertex:
+		ImGui::Text("vertex shader");
+		break;
+	case shaderModuleType_t::fragment:
+		ImGui::Text("fragment sahder");
+		break;
+	case shaderModuleType_t::geometry:
+		ImGui::Text("geometry");
+		break;
+	case shaderModuleType_t::tessControl:
+		ImGui::Text("tesselation control");
+		break;
+	case shaderModuleType_t::tessEvaluation:
+		ImGui::Text("tesselation evaluation");
+		break;
+	case shaderModuleType_t::compute:
+		ImGui::Text("compute");
+		break;
+	case shaderModuleType_t::kernel:
+		ImGui::Text("kernel");
+		break;
+	case shaderModuleType_t::invalid:
+		ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "invalid shader");
+		break;
+	default:
+		ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "invalid shader");
+		break;
+	}
+	
+	//auto blarg = ImGui::ListBox((string("##") + "Shader Module").c_str(), &activeModuleItem, CStrList(shaderModuleTypes).data(), shaderModuleTypes.size());
 }
 
 void shaderTool_t::DrawShaderReflection()
@@ -283,11 +311,11 @@ void shaderTool_t::DrawShaderReflection()
 	shaderOptions.fragment.default_int_precision;
 
 	ImGui::Text("GLSL Version: %i", shaderOptions.version);
-	ImGui::Text((std::string("Uses OpenGL ES:") + (shaderOptions.es ? "true" : "false")).c_str());
+	ImGui::Text((std::string("Uses OpenGL ES: ") + (shaderOptions.es ? "true" : "false")).c_str());
 	//ImGui::Text("float precision", shaderOptions.fragment.default_float_precision)
 
-	intPrecision = "integer precision:\t";
-	floatPrecision = "Floating point precision:\t";
+	intPrecision = "integer precision: ";
+	floatPrecision = "Floating point precision: ";
 
 	switch (shaderOptions.fragment.default_float_precision)
 	{
@@ -520,7 +548,7 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
 
         // --------------------------- First column : info and pipeline layouts ---------------------------------
 
-        ImGui::BeginChild("Column1", ImVec2(240, 0), true);
+        ImGui::BeginChild("Column1", ImVec2(350, 0), true);
 		DrawMeta();
 		ImGui::Separator();
 		DrawShaderTypes();
@@ -605,35 +633,117 @@ void shaderTool_t::save(std::string fileName)
 
 void shaderTool_t::load(std::string fileName)
 {
-    if (fileName.length() <= 0) return; //if filename is empty, return
-	if (!EndsWith(fileName, ".spv")) { //if the file name does not end with ".vkpipeline.json", add it to the filename
-		if (EndsWith(fileName, ".frag")) { //if the file name ends with ".vkpipeline" then add ".json" to the file name
-			fileName += ".spv";
-		}
-		else {
-			fileName += ".frag.spv";
-		}
+	if (fileName.length() <= 0)
+	{
+		return; //if filename is empty, return. dont bother loading that
 	}
-		spirv_cross::CompilerGLSL glsl(std::move(ReadSPIRVFile(fileName.c_str())));
-		shaderResources = glsl.get_shader_resources();
-		shaderOptions = glsl.get_options();
 
-		glslSource = glsl.compile();
-		shaderc::Compiler compiler;
-		shaderc::CompileOptions options;
-		
-		shaderc::AssemblyCompilationResult result =
-			compiler.CompileGlslToSpvAssembly(glslSource.c_str(), glslSource.size(), shaderc_shader_kind::shaderc_glsl_default_fragment_shader, "text", options);
+	spirv_cross::CompilerGLSL glsl(std::move(ReadSPIRVFile(fileName.c_str())));
+	shaderResources = glsl.get_shader_resources();
+	shaderOptions = glsl.get_options();
+	shaderOptions.vulkan_semantics = true;
+	glsl.set_options(shaderOptions);
 
-		if (result.GetCompilationStatus() != shaderc_compilation_status_success)
+	//spirv_cross::CompilerGLSL::execution.model;
+	glslSource = glsl.compile();
+
+	if (glslSource.empty())
+	{
+		//if the SPIRV binary cannot be compiled then quit here
+		return;
+	}
+
+	SPIRVSource = DetermineShaderModuleType(glslSource);
+
+}
+
+std::string shaderTool_t::DetermineShaderModuleType(std::string shaderSource)
+{
+	shaderc::Compiler compiler;
+	shaderc::CompileOptions options;
+
+	for (unsigned int moduleIter = 0; moduleIter < 5; moduleIter++)
+	{
+		switch (moduleIter)
 		{
-			printf("%s \n", result.GetErrorMessage().c_str());
+		case shaderc_shader_kind::shaderc_glsl_vertex_shader:
+		{
+			//if successful, return the result. else break until default.
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_vertex_shader, "vertex", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::vertex;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
 		}
 
-		SPIRVSource = std::string(result.cbegin(), result.cend());
-		//compile the GLSL code to SPIRV assembly
+		case shaderc_shader_kind::shaderc_glsl_fragment_shader:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_fragment_shader, "fragment", options);
+			if(result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::fragment;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
+		}
 
+		case shaderc_shader_kind::shaderc_glsl_compute_shader:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_compute_shader, "compute", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::compute;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
+		}
 
+		case shaderc_shader_kind::shaderc_glsl_geometry_shader:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_geometry_shader, "geometry", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::geometry;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
+		}
+
+		case shaderc_shader_kind::shaderc_glsl_tess_control_shader:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_tess_control_shader, "tess control", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::tessControl;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
+		}
+
+		case shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(shaderSource.c_str(), shaderSource.size(), shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader, "tess evaluation", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				shaderModuleType = shaderModuleType_t::tessEvaluation;
+				return std::string(result.cbegin(), result.cend());
+			}
+			break;
+		}
+
+		default:
+		{
+			//return empty string if the shader type cannot be determined
+			shaderModuleType = shaderModuleType_t::invalid;
+			return nullptr;
+			
+		}
+		}
+
+		
+	}
 }
 
 std::vector<uint32_t> shaderTool_t::ReadSPIRVFile(const char* fileName)

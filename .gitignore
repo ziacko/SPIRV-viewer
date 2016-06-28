@@ -6,3 +6,4 @@ x64/
 *.VC.db
 *.VC.opendb
 lib/shaderc/
+CMakeFiles/

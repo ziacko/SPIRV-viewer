@@ -35,22 +35,34 @@
 
 #include <shaderc/shaderc.hpp>
 
-#define textBoxSize 40960
+enum class shaderModuleType_t
+{
+	vertex,
+	fragment,
+	geometry,
+	tessControl,
+	tessEvaluation,
+	compute,
+	kernel,
+	invalid
+};
+
 
 // -------------------------------------------------------- PipelineLayoutTool -----------------------------------------------
 
 class shaderTool_t : public ToolFramework
 {
-   // std::vector<PipelineLayout> m_layouts;
-    //std::vector< std::unique_ptr<shaderGLSLModule_t> > m_dlayouts;
-    //std::vector<std::string> m_dsets;
-    std::string fileName = "default.vert.spv";
+	
+
+	std::string fileName = "default.vert.spv";
 	std::string glslSource = {};
 	std::string SPIRVSource = {};
 	spirv_cross::ShaderResources shaderResources = {};
 	spirv_cross::CompilerGLSL::Options shaderOptions = {};
 	std::string intPrecision;
 	std::string floatPrecision;
+
+	shaderModuleType_t shaderModuleType = shaderModuleType_t::invalid;
 
     // ---------------------- Names list UI helper ----------------------
 
@@ -63,6 +75,8 @@ class shaderTool_t : public ToolFramework
 	void DrawShaderReflection();
 	void DrawSPIRV(ImVec2 dimensions);
 	void DrawGLSL(ImVec2 dimensions);
+
+	std::string DetermineShaderModuleType(std::string shaderSource);
 
     void save(std::string fileName);
     void load(std::string fileName);
