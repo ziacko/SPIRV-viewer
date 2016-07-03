@@ -52,8 +52,6 @@ enum class shaderModuleType_t
 
 class shaderTool_t : public ToolFramework
 {
-	
-
 	std::string fileName = "default.vert.spv";
 	std::string glslSource = {};
 	std::string SPIRVSource = {};
@@ -87,6 +85,8 @@ public:
     const char* getWindowTitle(void) override;
     void init(void) override;
     void render(int screenWidth, int screenHeight) override;
+	std::string resourcePath;
+	std::string binaryPath;
 };
 
 #endif //SPIRV_VIEWER_

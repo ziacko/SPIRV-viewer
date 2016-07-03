@@ -51,6 +51,6 @@ link_directories(${LIB_DIR})
 
 add_executable(SPIRV_Viewer ${SOURCES} ${IMGUI_SOURCES} ${NFD_SOURCES} ${SPIRV_SOURCES} ${GLFW_SOURCES} ${HEADERS})
 
-set (LIBS shaderc jsoncppd glfw3)
+set (LIBS shaderc_combined jsoncppd glfw3 )
 target_link_libraries(SPIRV_Viewer ${LIBS} ${OPENGL_LIBRARIES})
 set_property(TARGET SPIRV_Viewer PROPERTY OUTPUT_NAME "SPIRV_Viewer")

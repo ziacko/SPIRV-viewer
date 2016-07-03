@@ -64,12 +64,15 @@ void SetupAssociation()
 	}
 	//add in the RIGHT file name
 	filePath += "SPIRV_Viewer.exe";
-
-	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\.spv", "SPIRV_Viewer.1");
-	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\.spv\\Content Type", "text/plain"); //for now, let .spv be seen as plain text in windows explorer
-	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\PercievedType", "SPIRV");
-	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\SPIRV_Viewer.1", "SPIRV_Viewer");
-	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\SPIRV_Viewer.1\\Shell\\Open\\Command", (filePath).c_str());
+	filePath += " \"%1\"";
+	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\.UUASoftware.SPIRV_Viewer.v1\\shell\\open\\command", filePath.c_str());
+	SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\.spv", "UUASoftware.SPIRV_Viewer.v1");
+	SetRegistry(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.spv", NULL);
+	SetRegistry(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.spv\\OpenWithProgids", "SPIRV_shader_binary");
+	SetRegistry(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.spv\\OpenWithProgids", "spv_auto_file");
+																							  //SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\PercievedType", "SPIRV");
+	//SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\SPIRV_Viewer.1", "SPIRV_Viewer");
+	//SetRegistry(HKEY_CURRENT_USER, "Software\\Classes\\SPIRV_Viewer.1\\Shell\\Open\\Command", (filePath).c_str());
 	SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, NULL, NULL); //essentially refresh the registry
 }
 

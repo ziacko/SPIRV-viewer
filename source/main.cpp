@@ -39,7 +39,7 @@
 #endif
 
 using namespace std;
-unique_ptr<ToolFramework> framework;
+unique_ptr<shaderTool_t> framework;
 
 static void setGUIStyle(void)
 {
@@ -100,7 +100,8 @@ static void setGUIStyle(void)
     cfg.GlyphExtraSpacing.y = 0.0f;
 
     ImGuiIO& io = ImGui::GetIO();
-    io.Fonts->AddFontFromFileTTF("resources/DejaVuSansMono.ttf", 20, &cfg);
+    io.Fonts->AddFontFromFileTTF( std::string(framework->resourcePath + "DejaVuSansMono.ttf").c_str(), 20, &cfg);
+	//io.Fonts->AddFontDefault();
 }
 
 int main(int numArgs, char* arguments[])
@@ -110,7 +111,27 @@ int main(int numArgs, char* arguments[])
 	for (int argIter = 0; argIter < numArgs; argIter++)
 	{
 		printf("%s \n", arguments[argIter]);
+		if (argIter > 0)
+		{
+			//store the binary path IF the binary was double clicked
+			framework->binaryPath = arguments[1];
+		}
+
+		else
+		{
+			//get the exe Path
+			framework->resourcePath = arguments[0];
+			//remove the file name and replace it with the resources folder
+			auto position = framework->resourcePath.rfind('\\');
+			if (position != std::string::npos && (position + 1) != std::string::npos)
+			{
+				framework->resourcePath.erase(position + 1);
+				framework->resourcePath += "resources\\";
+				printf("%s \n", framework->resourcePath.c_str());
+			}
+		}
 	}
+
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

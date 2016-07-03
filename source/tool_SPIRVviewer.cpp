@@ -152,64 +152,11 @@ const char* shaderTool_t::getWindowTitle()
 
 void shaderTool_t::init(void)
 {
-    /*m_layouts.push_back(PipelineLayout("LAYOUT_DEFAULT"));
-
-    m_dsets.push_back(("PSET_PER_FRAME"));
-    m_dsets.push_back(("PSET_PER_SCENE"));
-    m_dsets.push_back(("PSET_PER_CAMERA"));
-    m_dsets.push_back(("PSET_PER_MATERIAL"));
-    m_dsets.push_back(("PSET_PER_OBJECT"));
-
-    auto& descset = m_layouts[m_layouts.size() - 1].descsets;
-    descset.push_back(DescriptorSet());
-    descset.push_back(DescriptorSet());
-    descset.push_back(DescriptorSet());
-    descset.push_back(DescriptorSet());
-    descset.push_back(DescriptorSet());
-
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_FRAME_GLOBAL_INFO"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_CAMERA_INFO"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_WORLD_MATRIX"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_SCENE_PARAMS_GENERIC"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_MATERIAL_PARAMS_GENERIC"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("UBO_OBJECT_PARAMS_GENERIC"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SSBO_LIGHT_GRID_DATA"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SSBO_BATCHED_DRAWCALL_DATA"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_ARRAY"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_DIFFUSE_MAP"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_NORMAL_MAP"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_SHININESS_MAP"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_METALLIC_MAP"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_IRRADIANCE"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_RADIANCE"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_POSTROCESS0"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_POSTROCESS1"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_POSTROCESS2"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_POSTROCESS3"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_SHADOW0"));
-    m_dlayouts.push_back(make_unique<DescriptorLayout>("SAMPLER_SHADOW1"));
-
-    findDLV(0, "PSET_PER_FRAME").push_back(findDescLayoutByName("UBO_FRAME_GLOBAL_INFO"));
-    findDLV(0, "PSET_PER_CAMERA").push_back(findDescLayoutByName("UBO_CAMERA_INFO"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("UBO_WORLD_MATRIX"));
-    findDLV(0, "PSET_PER_SCENE").push_back(findDescLayoutByName("UBO_SCENE_PARAMS_GENERIC"));
-    findDLV(0, "PSET_PER_MATERIAL").push_back(findDescLayoutByName("UBO_MATERIAL_PARAMS_GENERIC"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("UBO_OBJECT_PARAMS_GENERIC"));
-    findDLV(0, "PSET_PER_CAMERA").push_back(findDescLayoutByName("SSBO_LIGHT_GRID_DATA"));
-    findDLV(0, "PSET_PER_MATERIAL").push_back(findDescLayoutByName("SSBO_BATCHED_DRAWCALL_DATA"));
-    findDLV(0, "PSET_PER_MATERIAL").push_back(findDescLayoutByName("SAMPLER_ARRAY"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_DIFFUSE_MAP"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_NORMAL_MAP"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_SHININESS_MAP"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_METALLIC_MAP"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_IRRADIANCE"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_RADIANCE"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_POSTROCESS0"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_POSTROCESS1"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_POSTROCESS2"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_POSTROCESS3"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_SHADOW0"));
-    findDLV(0, "PSET_PER_OBJECT").push_back(findDescLayoutByName("SAMPLER_SHADOW1"));*/
+	//if the shader binary has already been establish via double clicking in wondows explorer
+	if (!binaryPath.empty())
+	{
+		load(binaryPath);
+	}
 }
 
 void shaderTool_t::DrawMenu()

@@ -1,0 +1,34 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\spv_auto_file]
+
+[HKEY_CURRENT_USER\Software\Classes\spv_auto_file\DefaultIcon]
+@="\C:\\Users\\ziyad\\Documents\\SPIRV-viewer\\resources\\chicken.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\spv_auto_file\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\spv_auto_file\shell\open]
+@="open with SPIRV viewer"
+
+[HKEY_CURRENT_USER\Software\Classes\spv_auto_file\shell\open\command]
+@="\C:\\Users\\ziyad\\Documents\\SPIRV-viewer\\SPIRV_Viewer.exe\" \"%1\""
+
+#[HKEY_CURRENT_USER\Software\Classes\.spv]
+#@="UUASoftware.SPIRV_Viewer.v1"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.spv]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.spv\OpenWithList]
+"a"="SPIRV_Viewer.exe"
+"MRUList"="a"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.spv\OpenWithProgids]
+"SPIRV_shader_binary"=hex(0):
+"spv_auto_file"=hex(0):
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.spv\UserChoice]
+"Hash"="aXQjgjSSe/Q="
+"ProgId"="Applications\\SPIRV_Viewer.exe"
+
+#add to appPaths
+#
