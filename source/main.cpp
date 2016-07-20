@@ -108,9 +108,10 @@ int main(int numArgs, char* arguments[])
 {
 	framework = make_unique<shaderTool_t>();
 	printf("%i \n", numArgs);
+	printf("%s \n", arguments[0]);
+	printf("%s \n", arguments[1]);
 	for (int argIter = 0; argIter < numArgs; argIter++)
 	{
-		printf("%s \n", arguments[argIter]);
 		if (argIter > 0)
 		{
 			//store the binary path IF the binary was double clicked
@@ -120,6 +121,7 @@ int main(int numArgs, char* arguments[])
 		else
 		{
 			//get the exe Path
+			//printf("%s \n", arguments[argIter]);
 			framework->resourcePath = arguments[0];
 			//remove the file name and replace it with the resources folder
 			auto position = framework->resourcePath.rfind('\\');
@@ -127,7 +129,7 @@ int main(int numArgs, char* arguments[])
 			{
 				framework->resourcePath.erase(position + 1);
 				framework->resourcePath += "resources\\";
-				printf("%s \n", framework->resourcePath.c_str());
+				//printf("%s \n", framework->resourcePath.c_str());
 			}
 		}
 	}

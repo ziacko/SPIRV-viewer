@@ -35,33 +35,42 @@
 
 #include <shaderc/shaderc.hpp>
 
-enum class shaderModuleType_t
-{
-	vertex,
-	fragment,
-	geometry,
-	tessControl,
-	tessEvaluation,
-	compute,
-	kernel,
-	invalid
-};
 
+
+//store type, binary and sources
+struct shaderModule_t
+{
+	enum moduleType_t : unsigned int
+	{
+		vertex,
+		tessControl,
+		tessEvaluation,
+		geometry,
+		fragment,
+		compute,
+		kernel,
+		numStages,
+		invalid = -1
+	};
+
+	std::vector<uint32_t>					binaryList = {};
+	std::string								glslSource = {};
+	std::string								spirvSource = {};
+	spirv_cross::ShaderResources			shaderResources = {};
+	spirv_cross::CompilerGLSL::Options		shaderOptions = {};
+	std::string								intPrecision = {};
+	std::string								floatPrecision = {};
+	moduleType_t							shaderModuleType = moduleType_t::invalid;
+};
 
 // -------------------------------------------------------- PipelineLayoutTool -----------------------------------------------
 
 class shaderTool_t : public ToolFramework
 {
-	std::string fileName = "default.vert.spv";
-	std::string glslSource = {};
-	std::string SPIRVSource = {};
-	spirv_cross::ShaderResources shaderResources = {};
-	spirv_cross::CompilerGLSL::Options shaderOptions = {};
-	std::string intPrecision;
-	std::string floatPrecision;
+	std::string								fileName = "default.vert.spv";
+	std::vector<shaderModule_t>				shaderModules;
 
-	shaderModuleType_t shaderModuleType = shaderModuleType_t::invalid;
-
+	unsigned int currentModule = 0;
     // ---------------------- Names list UI helper ----------------------
 
     int displayNamedList(const char* title, const char* listboxName, const char* objname, const char* abbrev,
@@ -74,12 +83,14 @@ class shaderTool_t : public ToolFramework
 	void DrawSPIRV(ImVec2 dimensions);
 	void DrawGLSL(ImVec2 dimensions);
 
-	std::string DetermineShaderModuleType(std::string shaderSource);
+	void DetermineShaderModuleType(shaderModule_t& module);
 
     void save(std::string fileName);
     void load(std::string fileName);
 
 	std::vector<uint32_t> ReadSPIRVFile(const char* fileName);
+
+	void ReadVectorSPIRVFile(const char* fileName);
 
 public:
     const char* getWindowTitle(void) override;
