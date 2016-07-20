@@ -214,6 +214,69 @@ void shaderTool_t::DrawShaderTypes()
 	ImGui::TextColored(favColor, "%s:", "Shader module type");
 
 	//for each module, add a button for the type. if it is clicked, switch to drawing that one
+	for (unsigned int moduleIter = 0; moduleIter < shaderModules.size(); moduleIter++)
+	{
+		switch (shaderModules[moduleIter].moduleType)
+		{
+		case shaderModule_t::vertex:
+		{
+			if (ImGui::Button("vertex"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		case shaderModule_t::fragment:
+		{
+			if (ImGui::Button("fragment"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		case shaderModule_t::geometry:
+		{
+			if (ImGui::Button("geometry"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		case shaderModule_t::tessControl:
+		{
+			if (ImGui::Button("tess control"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		case shaderModule_t::tessEvaluation:
+		{
+			if (ImGui::Button("tess evaluation"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		case shaderModule_t::compute:
+		{
+			if (ImGui::Button("compute"))
+			{
+				currentModule = moduleIter;
+			}
+			break;
+		}
+
+		default:
+			break;
+		}
+	}
+	
 	/*switch (shaderModuleType)
 	{
 	case shaderModuleType_t::vertex:
@@ -642,7 +705,7 @@ void shaderTool_t::load(std::string fileName)
 			shaderc::Compiler compiler;
 			shaderc::CompileOptions options;
 
-			switch (shaderModules[moduleIter].shaderModuleType)
+			switch (shaderModules[moduleIter].moduleType)
 			{
 				case shaderModule_t::vertex:
 				{
@@ -684,7 +747,7 @@ void shaderTool_t::load(std::string fileName)
 
 				default:
 				{
-					shaderModules[moduleIter].shaderModuleType = shaderModule_t::invalid;
+					shaderModules[moduleIter].moduleType = shaderModule_t::invalid;
 					break;
 				}
 			}			
@@ -708,7 +771,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_vertex_shader, "vertex", options);
 				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::vertex;
+					module.moduleType = shaderModule_t::moduleType_t::vertex;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -719,7 +782,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_fragment_shader, "fragment", options);
 				if(result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::fragment;
+					module.moduleType = shaderModule_t::moduleType_t::fragment;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -730,7 +793,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_compute_shader, "compute", options);
 				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::compute;
+					module.moduleType = shaderModule_t::moduleType_t::compute;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -741,7 +804,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_geometry_shader, "geometry", options);
 				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::geometry;
+					module.moduleType = shaderModule_t::moduleType_t::geometry;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -752,7 +815,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_control_shader, "tesselation control", options);
 				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::tessControl;
+					module.moduleType = shaderModule_t::moduleType_t::tessControl;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -763,7 +826,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader, "tess evaluation", options);
 				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 				{
-					module.shaderModuleType = shaderModule_t::moduleType_t::tessEvaluation;
+					module.moduleType = shaderModule_t::moduleType_t::tessEvaluation;
 					module.spirvSource = std::string(result.cbegin(), result.cend());
 				}
 				break;
@@ -772,7 +835,7 @@ void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
 			default:
 			{
 				//return empty string if the shader type cannot be determined
-				module.shaderModuleType = shaderModule_t::moduleType_t::invalid;
+				module.moduleType = shaderModule_t::moduleType_t::invalid;
 				return;
 			}
 		}
@@ -862,7 +925,7 @@ void shaderTool_t::ReadVectorSPIRVFile(const char* fileName)
 			//binaryList.push_back(outBuffer);
 			shaderModule_t module = {};
 			module.binaryList = std::move(outBuffer);
-			module.shaderModuleType = (shaderModule_t::moduleType_t)stage;			
+			module.moduleType = (shaderModule_t::moduleType_t)stage;			
 			shaderModules.push_back(module);
 		}
 	}

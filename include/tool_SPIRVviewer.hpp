@@ -60,7 +60,7 @@ struct shaderModule_t
 	spirv_cross::CompilerGLSL::Options		shaderOptions = {};
 	std::string								intPrecision = {};
 	std::string								floatPrecision = {};
-	moduleType_t							shaderModuleType = moduleType_t::invalid;
+	moduleType_t							moduleType = moduleType_t::invalid;
 };
 
 // -------------------------------------------------------- PipelineLayoutTool -----------------------------------------------
