@@ -5,8 +5,7 @@ set(PROJECT_LABEL "SPIRV_Viewer")
 
 find_package(OpenGL REQUIRED)
 
-set (COMMON_OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-set (DEBUG_OUTPUT_DIR "${COMMON_OUTPUT_DIR}")
+set (OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}../")
 
 set (INCLUDE_DIR "./include")
 set (COMMON_INCLUDE_DIR "./lib/include")
@@ -52,15 +51,15 @@ set(LIB_DIR_RELEASE "${LIB_DIR}/Release")
 set(LIBS "")
 
 if (CMAKE_BUILD_TYPE MATCHES Release)
-	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${COMMON_OUTPUT_DIR})
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 	link_directories(${LIB_DIR} ${LIB_DIR_RELEASE})
 	set (LIBS shaderc_combined jsoncpp glfw3)
 elseif (CMAKE_BUILD_TYPE MATCHES Debug)
-	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${DEBUG_OUTPUT_DIR})
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 	link_directories(${LIB_DIR} ${LIB_DIR_DEBUG})
 	set (LIBS shaderc_combined jsoncppd glfw3d)
 else() #by default use release flags
-	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${COMMON_OUTPUT_DIR})
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 	link_directories(${LIB_DIR} ${LIB_DIR_RELEASE})
 	set (LIBS shaderc_combined jsoncpp glfw3)
 endif()

@@ -100,7 +100,9 @@ static void setGUIStyle(void)
     cfg.GlyphExtraSpacing.y = 0.0f;
 
     ImGuiIO& io = ImGui::GetIO();
-    io.Fonts->AddFontFromFileTTF( std::string(framework->resourcePath + "DejaVuSansMono.ttf").c_str(), 20, &cfg);
+	io.IniFilename = NULL;
+	//printf("%s \n", framework->resourcePath);
+    io.Fonts->AddFontFromFileTTF( std::string(framework->resourcePath + "DejaVuSansMono.ttf").c_str(), 15, &cfg);
 	//io.Fonts->AddFontDefault();
 }
 
