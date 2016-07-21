@@ -107,9 +107,9 @@ static void setGUIStyle(void)
 int main(int numArgs, char* arguments[])
 {
 	framework = make_unique<shaderTool_t>();
-	printf("%i \n", numArgs);
-	printf("%s \n", arguments[0]);
-	printf("%s \n", arguments[1]);
+	//printf("%i \n", numArgs);
+	//printf("%s \n", arguments[0]);
+	//printf("%s \n", arguments[1]);
 	for (int argIter = 0; argIter < numArgs; argIter++)
 	{
 		if (argIter > 0)

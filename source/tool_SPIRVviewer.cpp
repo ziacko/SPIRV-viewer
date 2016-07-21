@@ -39,6 +39,7 @@ static vector<string> shaderModuleTypes =
 	"TESS_EVALUATION",
 	"COMPUTE",
 };
+static string popupString = "About SPIRV Viewer";
 
 static int activeModuleItem = 0;
 static int activeDescsetItem = 0;
@@ -90,28 +91,55 @@ static int DisplayConfirmWindow(const char* text)
 static bool displayAboutWindow = false;
 static void DisplayAboutWindow(void)
 {
-    if (ImGui::BeginPopupModal("About VK Pipeline Layout Editor", &displayAboutWindow, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::TextColored(ImVec4(0.067f, 0.765f, 0.941f, 1.0f), "Vulkan Pipeline Layout Editor" 
+    if (ImGui::BeginPopupModal(popupString.c_str(), &displayAboutWindow, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::TextColored(ImVec4(0.067f, 0.765f, 0.941f, 1.0f), "SPIRV Viewer" 
                            "                                                                                              ");
         ImGui::TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "(c) Copyright 2016 UAA Software");
-        ImGui::TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "Programming by Xi Ma Chen");
+        ImGui::TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "Programming by Ziyad Barakat");
         ImGui::Spacing(); ImGui::Spacing();
         ImGui::TextWrapped(
-            "Static pipeline layout editor tool for the Vulkan API. Loads & saves from a simple json file format.\n"
+			"Static viewing tool for the SPIRV file format. loads SPIRV binary files from disk. \n"
+            //"Static pipeline layout editor tool for the Vulkan API. Loads & saves from a simple json file format.\n"
             "Quick guide:\n"
         );
         {
             ImGui::Bullet(); 
             ImGui::TextWrapped(
-                "A descriptor binding layout describes a single binding for a single shader stage. "
-                "For example, a binding layout might represent texture sampler, a uniform buffer object, and so forth."
+				"A SPIRV Binary can be decompiled into both GLSL(OpenGL and Vulkan) and SPIRV assembly as well as contain useful reflection information. "
+				"For Example, a SPIRV binary file is loaded then is decompiled into Vulkan ready GLSL and SPIRV Assembly in addition to information "
+				"regarding shader outputs and uniform buffers." 
+				//"A descriptor binding layout describes a single binding for a single shader stage. "
+                //"For example, a binding layout might represent texture sampler, a uniform buffer object, and so forth."
             );
-            ImGui::Bullet(); ImGui::TextWrapped("Descriptor binding layouts are represented as a global list, shared between all sets & pipelines.");
-            ImGui::Bullet(); ImGui::TextWrapped(
-                "A descriptor set layout describes a collection of descriptor bindings. It may be a good idea to group these by update frequency. "
-                "For example, one may have separate sets for per-frame, per-scene, per-camera, per-material and per-object shader data."
+            ImGui::Bullet(); 
+			//ImGui::TextWrapped("Descriptor binding layouts are represented as a global list, shared between all sets & pipelines.");
+			ImGui::TextWrapped("SPIRV information is broken down into GLSL source, SPIRV assembly and reflection information.");
+            ImGui::Bullet(); 
+			ImGui::TextWrapped(
+				"Source code is displayed in a text box with GLSL being in the right box and SPIRV assembly displayed in the left text box. "
+				"As for reflection information here is what you can expect to see (in order of appearance): \n"
+				"\t- GLSL version\n"
+				"\t- Whether OpenGL ES is being used\n"
+				"\t- Floating point precision\n"
+				"\t- Integer precision\n"
+				"\t- Atomics\n"
+				"\t- Push constant buffers\n"
+				"\t- Sampled images\n"
+				"\t- Stage inputs\n"
+				"\t- Stage outputs\n"
+				"\t- Storage buffers\n"
+				"\t- Storage images\n"
+				"\t- Sub pass inputs\n"
+				"\t- Uniform buffer\n"			
+				//"A descriptor set layout describes a collection of descriptor bindings. It may be a good idea to group these by update frequency. "
+               // "For example, one may have separate sets for per-frame, per-scene, per-camera, per-material and per-object shader data."
             );
-            ImGui::Bullet(); ImGui::TextWrapped("A pipeline layout describes a collection of descriptor set layouts.");
+			ImGui::Bullet();
+			ImGui::TextWrapped(
+				"If you are using a .vpsv file then you can change the active shader by clicking on the shader stage you want to view "
+				"which is displayed as a button on the left side under \"shader module type\". \n"
+				"Clicking one one of these will change the active binary being shown."
+			);
         }
         ImGui::Spacing(); ImGui::Spacing(); ImGui::Spacing();
         ImGui::Separator();
@@ -165,15 +193,15 @@ void shaderTool_t::DrawMenu()
 	{
 		if (ImGui::BeginMenu("Menu"))
 		{
-			if (ImGui::MenuItem("New", NULL, nullptr)) {
-			}
+			/*if (ImGui::MenuItem("New", NULL, nullptr)) {
+			}*/
 			if (ImGui::MenuItem("Open..", NULL, nullptr)) {
 				string p;
-				if (openDialog(p, "shader.json")) {
+				if (openDialog(p, nullptr)) {
 					this->load(p);
 				}
 			}
-			ImGui::Separator();
+			/*ImGui::Separator();
 			if (ImGui::MenuItem("Save", NULL, nullptr)) {
 				this->save(fileName.c_str());
 			}
@@ -182,7 +210,7 @@ void shaderTool_t::DrawMenu()
 				if (saveDialog(p, "shader.json")) {
 					this->save(p);
 				}
-			}
+			}*/
 			ImGui::Separator();
 			if (ImGui::MenuItem("Exit", NULL, nullptr)) {
 				exit(0);
@@ -205,13 +233,14 @@ void shaderTool_t::DrawMeta()
 	ImGui::TextColored(ImVec4(0.067f, 0.765f, 0.941f, 1.0f), "SPIRV-GLSL shader Editor");
 	ImGui::TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "(c) Copyright 2016 UAA Software");
 	ImGui::Spacing(); ImGui::Spacing();
-	ImGui::TextWrapped("%s", fileName.c_str());
-	ImGui::Spacing(); ImGui::Spacing();
 }
 
 void shaderTool_t::DrawShaderTypes()
 {
-	ImGui::TextColored(favColor, "%s:", "Shader module type");
+	if (!shaderModules.empty())
+	{
+		ImGui::TextColored(favColor, "%s:", "Shader module type");
+	}
 
 	//for each module, add a button for the type. if it is clicked, switch to drawing that one
 	for (unsigned int moduleIter = 0; moduleIter < shaderModules.size(); moduleIter++)
@@ -381,15 +410,17 @@ void shaderTool_t::DrawShaderReflection()
 		}
 		}
 		ImGui::Text("%s", shaderModules[currentModule].intPrecision.c_str());
+		ImGui::Separator();
+		ImGui::Spacing();
 
 
 		//atomic counters
-		ImGui::Text("Atomics Info");
+		ImGui::TextColored(favColor, "Atomics Info:");
 		for (unsigned int atomicIndex = 0; atomicIndex < shaderModules[currentModule].shaderResources.atomic_counters.size(); atomicIndex++)
 		{
-			ImGui::Text("Atomic #%i:", atomicIndex);
+			ImGui::Text("Atomic %i", atomicIndex);
 			ImGui::Text("Atomic ID: %i", shaderModules[currentModule].shaderResources.atomic_counters[atomicIndex].id);
-			ImGui::Text("Atomic Name: %s", shaderModules[currentModule].shaderResources.atomic_counters[atomicIndex].name.c_str());
+			ImGui::Text("Atomic name: %s", shaderModules[currentModule].shaderResources.atomic_counters[atomicIndex].name.c_str());
 			ImGui::Text("Atomic type ID: %i", shaderModules[currentModule].shaderResources.atomic_counters[atomicIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -397,12 +428,12 @@ void shaderTool_t::DrawShaderReflection()
 		ImGui::Spacing();
 
 		//push constant buffers // look this up!
-		ImGui::Text("Push constant buffers");
+		ImGui::TextColored(favColor, "Push constant buffers:");
 		for (unsigned int pushIndex = 0; pushIndex < shaderModules[currentModule].shaderResources.push_constant_buffers.size(); pushIndex++)
 		{
-			ImGui::Text("Push constant #%i:", pushIndex);
+			ImGui::Text("Push constant %i", pushIndex);
 			ImGui::Text("Push constant ID: %i", shaderModules[currentModule].shaderResources.push_constant_buffers[pushIndex].id);
-			ImGui::Text("Push constant Name: %s", shaderModules[currentModule].shaderResources.push_constant_buffers[pushIndex].name.c_str());
+			ImGui::Text("Push constant name: %s", shaderModules[currentModule].shaderResources.push_constant_buffers[pushIndex].name.c_str());
 			ImGui::Text("Push constant type ID: %i", shaderModules[currentModule].shaderResources.push_constant_buffers[pushIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -410,12 +441,12 @@ void shaderTool_t::DrawShaderReflection()
 		ImGui::Spacing();
 
 		//sampled images
-		ImGui::Text("Sampled images");
+		ImGui::TextColored(favColor, "Sampled images:");
 		for (unsigned int sampleIndex = 0; sampleIndex < shaderModules[currentModule].shaderResources.sampled_images.size(); sampleIndex++)
 		{
-			ImGui::Text("Sample #%i:", sampleIndex);
+			ImGui::Text("Sample %i", sampleIndex);
 			ImGui::Text("Sample ID: %i", shaderModules[currentModule].shaderResources.sampled_images[sampleIndex].id);
-			ImGui::Text("Sample Name: %s", shaderModules[currentModule].shaderResources.sampled_images[sampleIndex].name.c_str());
+			ImGui::Text("Sample name: %s", shaderModules[currentModule].shaderResources.sampled_images[sampleIndex].name.c_str());
 			ImGui::Text("Sample type ID: %i", shaderModules[currentModule].shaderResources.sampled_images[sampleIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -423,12 +454,12 @@ void shaderTool_t::DrawShaderReflection()
 		ImGui::Spacing();
 
 		//shader stage inputs
-		ImGui::Text("Shader stage inputs");
+		ImGui::TextColored(favColor, "Stage inputs:");
 		for (unsigned int inputIndex = 0; inputIndex < shaderModules[currentModule].shaderResources.stage_inputs.size(); inputIndex++)
 		{
-			ImGui::Text("Input #%i:", inputIndex);
+			ImGui::Text("Input %i", inputIndex);
 			ImGui::Text("Input ID: %i", shaderModules[currentModule].shaderResources.stage_inputs[inputIndex].id);
-			ImGui::Text("Input Name: %s", shaderModules[currentModule].shaderResources.stage_inputs[inputIndex].name.c_str());
+			ImGui::Text("Input name: %s", shaderModules[currentModule].shaderResources.stage_inputs[inputIndex].name.c_str());
 			ImGui::Text("Input type ID: %i", shaderModules[currentModule].shaderResources.stage_inputs[inputIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -436,12 +467,12 @@ void shaderTool_t::DrawShaderReflection()
 		ImGui::Spacing();
 
 		//shader stage outputs
-		ImGui::Text("Stage outputs");
+		ImGui::TextColored(favColor, "Stage outputs:");
 		for (unsigned int outputIndex = 0; outputIndex < shaderModules[currentModule].shaderResources.stage_outputs.size(); outputIndex++)
 		{
-			ImGui::Text("Output #%i:", outputIndex);
+			ImGui::Text("Output %i", outputIndex);
 			ImGui::Text("Output ID: %i", shaderModules[currentModule].shaderResources.stage_outputs[outputIndex].id);
-			ImGui::Text("Output Name: %s", shaderModules[currentModule].shaderResources.stage_outputs[outputIndex].name.c_str());
+			ImGui::Text("Output name: %s", shaderModules[currentModule].shaderResources.stage_outputs[outputIndex].name.c_str());
 			ImGui::Text("Output type ID: %i", shaderModules[currentModule].shaderResources.stage_outputs[outputIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -449,12 +480,12 @@ void shaderTool_t::DrawShaderReflection()
 		ImGui::Spacing();
 
 		//shader storage buffers
-		ImGui::Text("Storage buffers");
+		ImGui::TextColored(favColor, "Storage buffers:");
 		for (unsigned int storageIndex = 0; storageIndex < shaderModules[currentModule].shaderResources.storage_buffers.size(); storageIndex++)
 		{
-			ImGui::Text("Storage buffer #%i:", storageIndex);
+			ImGui::Text("Storage buffer %i", storageIndex);
 			ImGui::Text("Storage buffer ID: %i", shaderModules[currentModule].shaderResources.storage_buffers[storageIndex].id);
-			ImGui::Text("Storage buffer Name: %s", shaderModules[currentModule].shaderResources.storage_buffers[storageIndex].name.c_str());
+			ImGui::Text("Storage buffer name: %s", shaderModules[currentModule].shaderResources.storage_buffers[storageIndex].name.c_str());
 			ImGui::Text("Storage buffer type ID: %i", shaderModules[currentModule].shaderResources.storage_buffers[storageIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -464,12 +495,12 @@ void shaderTool_t::DrawShaderReflection()
 		//shader storage images? //need to look that one up 
 		//i think these can be written to (similar to render targets)
 		shaderModules[currentModule].shaderResources.storage_images;
-		ImGui::Text("Storage images");
+		ImGui::TextColored(favColor, "Storage images:");
 		for (unsigned int imageIndex = 0; imageIndex < shaderModules[currentModule].shaderResources.storage_images.size(); imageIndex++)
 		{
-			ImGui::Text("Storage image #%i:", imageIndex);
+			ImGui::Text("Storage image %i", imageIndex);
 			ImGui::Text("Storage image ID: %i", shaderModules[currentModule].shaderResources.storage_images[imageIndex].id);
-			ImGui::Text("Storage image Name: %s", shaderModules[currentModule].shaderResources.storage_images[imageIndex].name.c_str());
+			ImGui::Text("Storage image name: %s", shaderModules[currentModule].shaderResources.storage_images[imageIndex].name.c_str());
 			ImGui::Text("Storage image type ID: %i", shaderModules[currentModule].shaderResources.storage_images[imageIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -478,12 +509,12 @@ void shaderTool_t::DrawShaderReflection()
 
 		//shader sub pass inputs
 		shaderModules[currentModule].shaderResources.subpass_inputs;
-		ImGui::Text("Sub pass inputs");
+		ImGui::TextColored(favColor, "Sub pass inputs:");
 		for (unsigned int subpassIndex = 0; subpassIndex < shaderModules[currentModule].shaderResources.storage_images.size(); subpassIndex++)
 		{
-			ImGui::Text("Sub pass input #%i:", subpassIndex);
+			ImGui::Text("Sub pass input %i", subpassIndex);
 			ImGui::Text("Sub pass input ID: %i", shaderModules[currentModule].shaderResources.subpass_inputs[subpassIndex].id);
-			ImGui::Text("Sub pass input Name: %s", shaderModules[currentModule].shaderResources.subpass_inputs[subpassIndex].name.c_str());
+			ImGui::Text("Sub pass input name: %s", shaderModules[currentModule].shaderResources.subpass_inputs[subpassIndex].name.c_str());
 			ImGui::Text("Sub pass input type ID: %i", shaderModules[currentModule].shaderResources.subpass_inputs[subpassIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -492,12 +523,12 @@ void shaderTool_t::DrawShaderReflection()
 
 		//shader uniform buffers
 		shaderModules[currentModule].shaderResources.uniform_buffers;
-		ImGui::Text("Uniform buffers");
+		ImGui::TextColored(favColor, "Uniform buffers:");
 		for (unsigned int uniformIndex = 0; uniformIndex < shaderModules[currentModule].shaderResources.storage_images.size(); uniformIndex++)
 		{
-			ImGui::Text("Uniform buffer #%i:", uniformIndex);
+			ImGui::Text("Uniform buffer %i", uniformIndex);
 			ImGui::Text("Uniform buffer ID: %i", shaderModules[currentModule].shaderResources.uniform_buffers[uniformIndex].id);
-			ImGui::Text("Uniform buffer Name: %s", shaderModules[currentModule].shaderResources.uniform_buffers[uniformIndex].name.c_str());
+			ImGui::Text("Uniform buffer name: %s", shaderModules[currentModule].shaderResources.uniform_buffers[uniformIndex].name.c_str());
 			ImGui::Text("Uniform buffer type ID: %i", shaderModules[currentModule].shaderResources.uniform_buffers[uniformIndex].type_id);
 			ImGui::Spacing();
 		}
@@ -557,8 +588,9 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
         // --------------------------- Menu bar ---------------------------------
 		DrawMenu();
        
-        if (displayAboutWindow) {
-            ImGui::OpenPopup("About SPIRV-GLSL Editor");
+        if (displayAboutWindow) 
+		{
+            ImGui::OpenPopup(popupString.c_str());
             DisplayAboutWindow();
         }
 
@@ -912,15 +944,15 @@ void shaderTool_t::ReadVectorSPIRVFile(const char* fileName)
 				if (feof(file))
 				{
 					//check if end of file was found!
-					printf("eof found ! \n");
+					//printf("eof found ! \n");
 					break;
 				}
 
 				outBuffer.push_back(buffer);
 			}
-			printf("position (num elements) processed %i \n", position);
+			/*printf("position (num elements) processed %i \n", position);
 			printf("binary size %i \n", binarySize);
-			printf("bytes read (32 bit ints) %i \n", position * sizeof(uint32_t));
+			printf("bytes read (32 bit ints) %i \n", position * sizeof(uint32_t));*/
 			//if everything is all good create a shader module and push it back :)
 			//binaryList.push_back(outBuffer);
 			shaderModule_t module = {};

@@ -1189,7 +1189,6 @@ ImFont* ImFontAtlas::AddFontDefault(const ImFontConfig* font_cfg_template)
 ImFont* ImFontAtlas::AddFontFromFileTTF(const char* filename, float size_pixels, const ImFontConfig* font_cfg_template, const ImWchar* glyph_ranges)
 {
     int data_size = 0;
-	printf("%s\n", filename);
     void* data = ImLoadFileToMemory(filename, "rb", &data_size, 0);
     if (!data)
     {
