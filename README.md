@@ -1,5 +1,5 @@
 # SPIRV-viewer
-a tool for viewing SPIRV binaries to GLSL and SPIRV assembly as well as reflection data
+a tool for viewing SPIRV binaries as GLSL and SPIRV assembly as well as reflection data
 
 Static viewing tool for the SPIRV file format. loads SPIRV binary files from disk.
 
