@@ -1,0 +1,9 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/glslc/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\glslc\CMakeFiles\generate.stamp is up-to-date.
+  file_compiler.cc
+  file.cc
+  file_includer.cc
+  shader_stage.cc
+  dependency_info.cc
+  Generating Code...
+  glslc.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\glslc\Release\glslc.lib

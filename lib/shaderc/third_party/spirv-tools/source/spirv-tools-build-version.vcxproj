@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{340BD224-E3E7-3598-92A4-3FD7D9801C1F}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>spirv-tools-build-version</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\build-version.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\73f432aa20dee33f190af1e3d0a40be3\spirv-tools-build-version.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/73f432aa20dee33f190af1e3d0a40be3/spirv-tools-build-version.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\spirv-tools-build-version</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/73f432aa20dee33f190af1e3d0a40be3/spirv-tools-build-version.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\spirv-tools-build-version</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/73f432aa20dee33f190af1e3d0a40be3/spirv-tools-build-version.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\spirv-tools-build-version</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/73f432aa20dee33f190af1e3d0a40be3/spirv-tools-build-version.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\spirv-tools-build-version</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\spirv-tools-build-version" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/ZERO_CHECK.vcxproj">
+      <Project>8DED3C34-0952-3BE9-926E-5DDEC53147D2</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

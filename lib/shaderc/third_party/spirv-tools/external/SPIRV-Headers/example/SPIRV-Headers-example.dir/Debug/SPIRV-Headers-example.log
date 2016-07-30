@@ -1,0 +1,4 @@
+﻿  Building Custom Rule D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/external/SPIRV-Headers/example/CMakeLists.txt
+  CMake does not need to re-run because D:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\example\CMakeFiles\generate.stamp is up-to-date.
+  example.cpp
+  SPIRV-Headers-example.vcxproj -> D:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\example\Debug\SPIRV-Headers-example.lib

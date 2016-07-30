@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp is up-to-date.
+  compiler.cc
+C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\src\compiler.cc(458): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(346): note: see declaration of 'strncpy'
+  file_finder.cc
+  io.cc
+  message.cc
+  resources.cc
+  shader_stage.cc
+  spirv_tools_wrapper.cc
+  version_profile.cc
+  Generating Code...
+  shaderc_util.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\Debug\shaderc_util.lib

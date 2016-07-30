@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\CMakeFiles\15429e8da47d0926c990597bbe10252c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9FED7CA4-1A28-335B-9CBC-4398ADA7DB63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/glslc/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\glslc\CMakeFiles\generate.stamp is up-to-date.
+  file_test.cc
+  glslc_file_test.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\glslc\Debug\glslc_file_test.exe
+  glslc_file_test.vcxproj -> C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/glslc/Debug/glslc_file_test.pdb (Full PDB)

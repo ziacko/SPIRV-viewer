@@ -1,0 +1,16 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/gtests/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\gtests\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W3' with '/w'
+  main.cpp
+  Settings.cpp
+  TestFixture.cpp
+  AST.FromFile.cpp
+  BuiltInResource.FromFile.cpp
+  Config.FromFile.cpp
+  Hlsl.FromFile.cpp
+  Link.FromFile.cpp
+  Pp.FromFile.cpp
+  Spv.FromFile.cpp
+  Generating Code...
+  glslangtests.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\gtests\Debug\glslangtests.exe
+  glslangtests.vcxproj -> C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/gtests/Debug/glslangtests.pdb (Full PDB)

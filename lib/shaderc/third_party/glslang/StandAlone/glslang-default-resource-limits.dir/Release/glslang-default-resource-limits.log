@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/StandAlone/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\StandAlone\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W3' with '/w'
+  ResourceLimits.cpp
+  glslang-default-resource-limits.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\StandAlone\Release\glslang-default-resource-limits.lib

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\OGLCompilersDLL\InitializeDll.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\OGLCompilersDLL\InitializeDll.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\OGLCompilersDLL\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{70A663E4-6B86-36F4-93F6-68B942D926B2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

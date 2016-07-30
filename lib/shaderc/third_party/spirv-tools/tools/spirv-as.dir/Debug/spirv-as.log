@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/tools/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\tools\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W3' with '/w'
+  as.cpp
+  spirv-as.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\tools\Debug\spirv-as.exe
+  spirv-as.vcxproj -> C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/tools/Debug/spirv-as.pdb (Full PDB)

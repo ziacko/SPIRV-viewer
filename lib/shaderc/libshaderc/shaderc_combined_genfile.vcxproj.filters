@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\744cc77b63bda52ec7883a9918e746f9\shaderc_combined.lib.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\3b02a403176c2e492c9c7dd7c4ecdc14\shaderc_combined_genfile.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc\CMakeFiles\shaderc_combined_genfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A50158D9-8229-38AD-B977-10F18415856C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

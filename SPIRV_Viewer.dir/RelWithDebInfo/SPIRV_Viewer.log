@@ -1,0 +1,33 @@
+﻿  main.cpp
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(91): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(88): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(103): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(100): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\ziyad\Documents\SPIRV-viewer\include\tool_SPIRVviewer.hpp(54): warning C4309: 'initializing': truncation of constant value
+C:\Users\ziyad\Documents\SPIRV-viewer\include\tool_SPIRVviewer.hpp(54): warning C4369: 'shaderModule_t::invalid':  enumerator value '-1' cannot be represented as 'unsigned int', value is '4294967295'
+C:\Users\ziyad\Documents\SPIRV-viewer\source\main.cpp(37): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition
+  C:\Users\ziyad\Documents\SPIRV-viewer\lib\include\GL/glcorearb.h(59): note: see previous definition of 'WIN32_LEAN_AND_MEAN'
+  tool_SPIRVviewer.cpp
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(91): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(88): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(103): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ziyad\documents\spirv-viewer\lib\include\cross\spirv_common.hpp(100): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\ziyad\Documents\SPIRV-viewer\include\tool_SPIRVviewer.hpp(54): warning C4309: 'initializing': truncation of constant value
+C:\Users\ziyad\Documents\SPIRV-viewer\include\tool_SPIRVviewer.hpp(54): warning C4369: 'shaderModule_t::invalid':  enumerator value '-1' cannot be represented as 'unsigned int', value is '4294967295'
+C:\Users\ziyad\Documents\SPIRV-viewer\source\tool_SPIRVviewer.cpp(578): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ziyad\Documents\SPIRV-viewer\source\tool_SPIRVviewer.cpp(952): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+C:\Users\ziyad\Documents\SPIRV-viewer\source\tool_SPIRVviewer.cpp(999): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ziyad\Documents\SPIRV-viewer\source\tool_SPIRVviewer.cpp(979): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+  Generating Code...
+  SPIRV_Viewer.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\RelWithDebInfo\SPIRV_Viewer.exe
+  SPIRV_Viewer.vcxproj -> C:/Users/ziyad/Documents/SPIRV-viewer/RelWithDebInfo/SPIRV_Viewer.pdb (Full PDB)

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/googletest/googletest/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\gtest\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W4' with '/w'
+  gtest-all.cc
+  gtest.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\gtest\Debug\gtest.lib
