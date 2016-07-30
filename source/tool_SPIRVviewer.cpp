@@ -26,7 +26,6 @@
 #include <algorithm>
 #include <string>
 #include <fstream>
-#include <json/json.h>
 
 using namespace std;
 
@@ -699,17 +698,15 @@ void shaderTool_t::load(std::string fileName)
 		module.shaderOptions = glsl.get_options();
 		module.shaderOptions.vulkan_semantics = true;
 		glsl.set_options(module.shaderOptions);
-
-		//spirv_cross::CompilerGLSL::execution.model;
 		module.glslSource = glsl.compile();
 
 		if (module.glslSource.empty())
 		{
-			//if the SPIRV binary cannot be compiled then quit here
+			//if the SPIRV binary cannot be compiled to GLSL then quit here
 			return;
 		}
 
-		DetermineShaderModuleType(module);
+		DetermineShaderModuleType(module, glsl.execution.model);
 		shaderModules.push_back(module);
 	}
 
@@ -835,114 +832,119 @@ void shaderTool_t::load(std::string fileName)
 	}
 }
 
-void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module)
+bool shaderTool_t::CheckShaderType(shaderModule_t& module, shaderc::AssemblyCompilationResult& result)
+{
+	return false;
+}
+
+void shaderTool_t::DetermineShaderModuleType(shaderModule_t& module, spv::ExecutionModel model)
 {
 	shaderc::Compiler compiler;
 	shaderc::CompileOptions options;
-
-	for (unsigned int moduleIter = 0; moduleIter < 5; moduleIter++)
+	//if successful, return the result. else break until default.
+	switch (model)
 	{
-		//if successful, return the result. else break until default.
-		switch (moduleIter)
+	case spv::ExecutionModel::ExecutionModelVertex:
 		{
-			case shaderc_shader_kind::shaderc_glsl_vertex_shader:
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_vertex_shader, "vertex", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_vertex_shader, "vertex", options);
-				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::vertex;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
-
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+				module.moduleType = shaderModule_t::moduleType_t::vertex;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			case shaderc_shader_kind::shaderc_glsl_fragment_shader:
+			else
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_fragment_shader, "fragment", options);
-				if(result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::fragment;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
+				module.spirvSource = result.GetErrorMessage();
+			}
+			break;
+		}
 
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+		case spv::ExecutionModel::ExecutionModelFragment:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_fragment_shader, "fragment", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				module.moduleType = shaderModule_t::moduleType_t::fragment;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			case shaderc_shader_kind::shaderc_glsl_compute_shader:
+			else
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_compute_shader, "compute", options);
-				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::compute;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+				module.spirvSource = result.GetErrorMessage();
+			}
+			break;
+		}
+
+		case spv::ExecutionModel::ExecutionModelGLCompute:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_compute_shader, "compute", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				module.moduleType = shaderModule_t::moduleType_t::compute;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			case shaderc_shader_kind::shaderc_glsl_geometry_shader:
+			else
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_geometry_shader, "geometry", options);
-				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::geometry;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+				module.spirvSource = result.GetErrorMessage();
+			}
+			break;
+		}
+
+		case spv::ExecutionModel::ExecutionModelGeometry:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_geometry_shader, "geometry", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				module.moduleType = shaderModule_t::moduleType_t::geometry;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			case shaderc_shader_kind::shaderc_glsl_tess_control_shader:
+			else
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_control_shader, "tesselation control", options);
-				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::tessControl;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+				module.spirvSource = result.GetErrorMessage();
+			}
+			break;
+		}
+
+		case spv::ExecutionModel::ExecutionModelTessellationControl:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_control_shader, "tess control", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				module.moduleType = shaderModule_t::moduleType_t::tessControl;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			case shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader:
+			else
 			{
-				shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader, "tess evaluation", options);
-				if (result.GetCompilationStatus() == shaderc_compilation_status_success)
-				{
-					module.moduleType = shaderModule_t::moduleType_t::tessEvaluation;
-					module.spirvSource = std::string(result.cbegin(), result.cend());
-				}
-				else
-				{
-					module.spirvSource = result.GetErrorMessage();
-				}
-				break;
+				module.spirvSource = result.GetErrorMessage();
+			}
+			break;
+		}
+
+		case spv::ExecutionModel::ExecutionModelTessellationEvaluation:
+		{
+			shaderc::AssemblyCompilationResult result = compiler.CompileGlslToSpvAssembly(module.glslSource.c_str(), module.glslSource.size(), shaderc_shader_kind::shaderc_glsl_tess_evaluation_shader, "tess eval", options);
+			if (result.GetCompilationStatus() == shaderc_compilation_status_success)
+			{
+				module.moduleType = shaderModule_t::moduleType_t::tessEvaluation;
+				module.spirvSource = std::string(result.cbegin(), result.cend());
 			}
 
-			default:
+			else
 			{
-				//return empty string if the shader type cannot be determined
-				module.moduleType = shaderModule_t::moduleType_t::invalid;
-				return;
+				module.spirvSource = result.GetErrorMessage();
 			}
+			break;
+		}
+
+		default:
+		{
+			//return empty string if the shader type cannot be determined
+			module.moduleType = shaderModule_t::moduleType_t::invalid;
+			return;
 		}
 	}
 }

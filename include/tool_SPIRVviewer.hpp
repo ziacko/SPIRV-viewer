@@ -35,8 +35,6 @@
 
 #include <shaderc/shaderc.hpp>
 
-
-
 //store type, binary and sources
 struct shaderModule_t
 {
@@ -62,7 +60,7 @@ struct shaderModule_t
 	std::string								floatPrecision = {};
 	moduleType_t							moduleType = moduleType_t::invalid;
 };
-
+	//spv::ExecutionModel						
 // -------------------------------------------------------- PipelineLayoutTool -----------------------------------------------
 
 class shaderTool_t : public ToolFramework
@@ -83,10 +81,11 @@ class shaderTool_t : public ToolFramework
 	void DrawSPIRV(ImVec2 dimensions);
 	void DrawGLSL(ImVec2 dimensions);
 
-	void DetermineShaderModuleType(shaderModule_t& module);
+	bool CheckShaderType(shaderModule_t& module, shaderc::AssemblyCompilationResult& result);
+	void DetermineShaderModuleType(shaderModule_t& module, spv::ExecutionModel model);
 
-    void save(std::string fileName);
-    void load(std::string fileName);
+	void save(std::string fileName);
+	void load(std::string fileName);
 
 	std::vector<uint32_t> ReadSPIRVFile(const char* fileName);
 

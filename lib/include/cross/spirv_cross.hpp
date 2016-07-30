@@ -171,7 +171,8 @@ public:
 	// Query shader resources, use ids with reflection interface to modify or query binding points, etc.
 	ShaderResources get_shader_resources() const;
 
-protected:
+//protected:
+
 	const uint32_t *stream(const Instruction &instr) const
 	{
 		// If we're not going to use any arguments, just return nullptr.

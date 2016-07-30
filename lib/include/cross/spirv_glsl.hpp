@@ -114,7 +114,8 @@ public:
 	}
 	std::string compile() override;
 
-protected:
+//protected:
+
 	void reset();
 	void emit_function(SPIRFunction &func, uint64_t return_flags);
 
