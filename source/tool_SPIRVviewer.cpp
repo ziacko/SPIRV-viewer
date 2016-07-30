@@ -546,7 +546,7 @@ void shaderTool_t::DrawSPIRV(ImVec2 dimensions)
 		ImGui::SetWindowSize("SPIRV", dimensions);
 		ImGui::SetScrollX(20.0f);
 		//ImGui::SetScrollY(10.0f);
-		ImGui::TextColored(favColor, "%s:", "SPIRV source code");
+		ImGui::TextColored(favColor, "%s:", "\t SPIRV source code");
 		ImGui::Separator();
 		//add open in in editor button and open in vim button
 		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].spirvSource.c_str(), shaderModules[currentModule].spirvSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
@@ -564,7 +564,7 @@ void shaderTool_t::DrawGLSL(ImVec2 dimensions)
 		ImGui::SetScrollX(20.0f);
 		
 		//ImGui::SetScrollY(10.0f);
-		ImGui::TextColored(favColor, "%s:", "GLSL source code");
+		ImGui::TextColored(favColor, "%s:", "\t GLSL source code");
 		ImGui::Separator();
 		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].glslSource.c_str(), shaderModules[currentModule].glslSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
 		
