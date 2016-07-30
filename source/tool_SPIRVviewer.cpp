@@ -542,14 +542,14 @@ void shaderTool_t::DrawSPIRV(ImVec2 dimensions)
 {
 	if (!shaderModules.empty())
 	{
-		ImGui::BeginChild("SPIRV", dimensions, true);
+		ImGui::BeginChild("SPIRV", dimensions, true, ImGuiWindowFlags_NoScrollbar);
 		ImGui::SetWindowSize("SPIRV", dimensions);
+		ImGui::SetScrollX(20.0f);
+		//ImGui::SetScrollY(10.0f);
 		ImGui::TextColored(favColor, "%s:", "SPIRV source code");
 		ImGui::Separator();
 		//add open in in editor button and open in vim button
 		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].spirvSource.c_str(), shaderModules[currentModule].spirvSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
-		//ImGui::Button("open in editor"); //if clicked, open the source code in a editor
-		//ImGui::Button("open in vim"); //if clicked, open the source code in vim
 
 		ImGui::EndChild();
 		ImGui::SameLine();
@@ -560,13 +560,14 @@ void shaderTool_t::DrawGLSL(ImVec2 dimensions)
 {
 	if (!shaderModules.empty())
 	{
-		ImGui::BeginChild("GLSL", dimensions, true);
+		ImGui::BeginChild("GLSL", dimensions, true, ImGuiWindowFlags_NoScrollbar);
+		ImGui::SetScrollX(20.0f);
+		
+		//ImGui::SetScrollY(10.0f);
 		ImGui::TextColored(favColor, "%s:", "GLSL source code");
 		ImGui::Separator();
 		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].glslSource.c_str(), shaderModules[currentModule].glslSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
-
-		//ImGui::Button("open in editor"); //if clicked, open the source code in a editor
-		//ImGui::Button("open in vim"); //if clicked, open the source code in vim
+		
 		ImGui::EndChild();
 	}
 }
@@ -591,7 +592,6 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
 		}
 
 		// --------------------------- First column : info and pipeline layouts ---------------------------------
-
 		ImGui::BeginChild("Column1", ImVec2(350, 0), true);
 		DrawMeta();
 		ImGui::Separator();
@@ -606,14 +606,13 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
 		ImGui::BeginChild("test", ImVec2(0, 0), true, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoScrollbar);
 		ImVec2 windowDimensions = ImGui::GetWindowSize();
 		ImVec2 newDimensions = ImVec2(windowDimensions.x / 2, windowDimensions.y);
-
+		ImGui::SetScrollX(20.0f);
 		// --------------------------- Second column : SPIRV ---------------------------------
 		DrawSPIRV(newDimensions);
 		// --------------------------- Third column : GLSL ---------------------------------
 		DrawGLSL(newDimensions);
 
 		ImGui::EndChild(); // tests*/
-       
 	}
 
 	ImGui::End();
@@ -702,6 +701,7 @@ void shaderTool_t::load(std::string fileName)
 			//if the SPIRV binary cannot be compiled to GLSL then quit here
 			return;
 		}
+		module.glslSource += "\n";
 
 		DetermineShaderModuleType(module, glsl.execution.model);
 		shaderModules.push_back(module);
@@ -728,6 +728,8 @@ void shaderTool_t::load(std::string fileName)
 				//if the SPIRV binary cannot be compiled then quit here
 				return;
 			}
+
+			shaderModules[moduleIter].glslSource += "\n";
 			shaderc::Compiler compiler;
 			shaderc::CompileOptions options;
 
@@ -739,11 +741,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -753,11 +757,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -767,11 +773,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -781,11 +789,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -795,11 +805,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -810,11 +822,13 @@ void shaderTool_t::load(std::string fileName)
 					if (result.GetCompilationStatus() == shaderc_compilation_status_success)
 					{
 						shaderModules[moduleIter].spirvSource = std::string(result.cbegin(), result.cend());
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 
 					else
 					{
 						shaderModules[moduleIter].spirvSource = result.GetErrorMessage();
+						shaderModules[moduleIter].spirvSource += "\n";
 					}
 					break;
 				}
@@ -1022,6 +1036,7 @@ void shaderTool_t::ReadVectorSPIRVFile(const char* fileName)
 
 				outBuffer.push_back(buffer);
 			}
+
 			/*printf("position (num elements) processed %i \n", position);
 			printf("binary size %i \n", binarySize);
 			printf("bytes read (32 bit ints) %i \n", position * sizeof(uint32_t));*/
