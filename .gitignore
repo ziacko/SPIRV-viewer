@@ -7,3 +7,10 @@ x64/
 *.VC.opendb
 lib/shaderc/
 CMakeFiles/
+SPIRV_Viewer.dir/
+Win32/
+*.filters
+CMakeCache.txt
+*.vcxproj
+cmake_install.cmake
+*.sln
