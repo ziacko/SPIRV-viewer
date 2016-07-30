@@ -547,9 +547,9 @@ void shaderTool_t::DrawSPIRV(ImVec2 dimensions)
 		ImGui::TextColored(favColor, "%s:", "SPIRV source code");
 		ImGui::Separator();
 		//add open in in editor button and open in vim button
-		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].spirvSource.c_str(), shaderModules[currentModule].spirvSource.size() * sizeof(char), ImVec2(dimensions.x, dimensions.y - 100), ImGuiInputTextFlags_ReadOnly);
-		ImGui::Button("open in editor"); //if clicked, open the source code in a editor
-		ImGui::Button("open in vim"); //if clicked, open the source code in vim
+		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].spirvSource.c_str(), shaderModules[currentModule].spirvSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
+		//ImGui::Button("open in editor"); //if clicked, open the source code in a editor
+		//ImGui::Button("open in vim"); //if clicked, open the source code in vim
 
 		ImGui::EndChild();
 		ImGui::SameLine();
@@ -563,39 +563,36 @@ void shaderTool_t::DrawGLSL(ImVec2 dimensions)
 		ImGui::BeginChild("GLSL", dimensions, true);
 		ImGui::TextColored(favColor, "%s:", "GLSL source code");
 		ImGui::Separator();
-		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].glslSource.c_str(), shaderModules[currentModule].glslSource.size() * sizeof(char), ImVec2(dimensions.x, dimensions.y - 100), ImGuiInputTextFlags_ReadOnly);
+		ImGui::InputTextMultiline("##", (char*)shaderModules[currentModule].glslSource.c_str(), shaderModules[currentModule].glslSource.size() * sizeof(char), dimensions, ImGuiInputTextFlags_ReadOnly);
 
-		ImGui::Button("open in editor"); //if clicked, open the source code in a editor
-		ImGui::Button("open in vim"); //if clicked, open the source code in vim
+		//ImGui::Button("open in editor"); //if clicked, open the source code in a editor
+		//ImGui::Button("open in vim"); //if clicked, open the source code in vim
 		ImGui::EndChild();
 	}
 }
 
 void shaderTool_t::render(int screenWidth, int screenHeight)
 {
-    ImGui::SetNextWindowPos(ImVec2(4, 4));
-    ImGui::SetNextWindowSize(ImVec2(screenWidth - 8, screenHeight - 8));
+	ImGui::SetNextWindowPos(ImVec2(4, 4));
+	ImGui::SetNextWindowSize(ImVec2(screenWidth - 8, screenHeight - 8));
 
 
-    ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize |
-        ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus |
-        ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_HorizontalScrollbar;
-    ImGui::Begin("Main window", nullptr, windowFlags);
-    {
-        
-
-        // --------------------------- Menu bar ---------------------------------
+	ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize |
+		ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus |
+		ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_HorizontalScrollbar;
+	ImGui::Begin("Main window", nullptr, windowFlags);
+	{
+		// --------------------------- Menu bar ---------------------------------
 		DrawMenu();
-       
-        if (displayAboutWindow) 
+		if (displayAboutWindow) 
 		{
-            ImGui::OpenPopup(popupString.c_str());
-            DisplayAboutWindow();
-        }
+			ImGui::OpenPopup(popupString.c_str());
+			DisplayAboutWindow();
+		}
 
-        // --------------------------- First column : info and pipeline layouts ---------------------------------
+		// --------------------------- First column : info and pipeline layouts ---------------------------------
 
-        ImGui::BeginChild("Column1", ImVec2(350, 0), true);
+		ImGui::BeginChild("Column1", ImVec2(350, 0), true);
 		DrawMeta();
 		ImGui::Separator();
 		DrawShaderTypes();
@@ -606,18 +603,18 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
 		ImGui::SameLine();
 
 		//get the size of the window the halve it for the children
-		ImGui::BeginChild("test", ImVec2(0, 0), true, ImGuiWindowFlags_AlwaysAutoResize);
+		ImGui::BeginChild("test", ImVec2(0, 0), true, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoScrollbar);
 		ImVec2 windowDimensions = ImGui::GetWindowSize();
-		ImVec2 newDimensions = ImVec2(windowDimensions.x / 2, windowDimensions.y - 10);
+		ImVec2 newDimensions = ImVec2(windowDimensions.x / 2, windowDimensions.y);
 
-        // --------------------------- Second column : SPIRV ---------------------------------
+		// --------------------------- Second column : SPIRV ---------------------------------
 		DrawSPIRV(newDimensions);
-        // --------------------------- Third column : GLSL ---------------------------------
+		// --------------------------- Third column : GLSL ---------------------------------
 		DrawGLSL(newDimensions);
 
 		ImGui::EndChild(); // tests*/
        
-    }
+	}
 
 	ImGui::End();
 }
