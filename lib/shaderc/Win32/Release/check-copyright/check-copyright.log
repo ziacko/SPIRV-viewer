@@ -1,5 +1,0 @@
-﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/CMakeLists.txt
-  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\CMakeFiles\generate.stamp is up-to-date.
-  Check copyright
-  .\examples\CMakeFiles\3.6.0-rc2\CompilerIdCXX\CMakeCXXCompilerId.cpp  has no copyright message.
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(171,5): error MSB6006: "cmd.exe" exited with code 1.

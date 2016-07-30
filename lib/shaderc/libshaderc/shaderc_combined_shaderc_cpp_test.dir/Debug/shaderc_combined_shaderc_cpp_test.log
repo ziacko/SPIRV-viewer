@@ -1,6 +1,0 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (shaderc_combined_shaderc_cpp_test.dir\Debug\) contains files shared from another project (shaderc_combined_shaderc_cpp_test.vcxproj, shaderc_combined_shaderc_cpp_test.vcxproj, shaderc_combined_shaderc_cpp_test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc/CMakeLists.txt
-  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc\CMakeFiles\generate.stamp is up-to-date.
-  shaderc_cpp_test.cc
-  shaderc_combined_shaderc_cpp_test.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc\Debug\shaderc_combined_shaderc_cpp_test.exe
-  shaderc_combined_shaderc_cpp_test.vcxproj -> C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc/Debug/shaderc_combined_shaderc_cpp_test.pdb (Full PDB)

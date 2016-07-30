@@ -1,1 +1,0 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Win32\Debug\shaderc_combined_genfile\) contains files shared from another project (shaderc_combined_genfile.vcxproj, shaderc_combined_genfile.vcxproj, shaderc_combined_genfile.vcxproj).  This can lead to incorrect clean and rebuild behavior.
