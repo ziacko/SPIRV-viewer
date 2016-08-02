@@ -545,6 +545,7 @@ void shaderTool_t::DrawSPIRV(ImVec2 dimensions)
 		ImGui::BeginChild("SPIRV", dimensions, true, ImGuiWindowFlags_NoScrollbar);
 		ImGui::SetWindowSize("SPIRV", dimensions);
 		ImGui::SetScrollX(20.0f);
+
 		//ImGui::SetScrollY(10.0f);
 		ImGui::TextColored(favColor, "%s:", "\t SPIRV source code");
 		ImGui::Separator();
@@ -582,6 +583,8 @@ void shaderTool_t::render(int screenWidth, int screenHeight)
 		ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus |
 		ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_HorizontalScrollbar;
 	ImGui::Begin("Main window", nullptr, windowFlags);
+	ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.0f, 0.0f, 0.0f, 0.5f));
+	//ImGui::ShowStyleEditor();
 	{
 		// --------------------------- Menu bar ---------------------------------
 		DrawMenu();
