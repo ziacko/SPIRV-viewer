@@ -1,0 +1,12 @@
+﻿  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/SPIRV/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\SPIRV\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W3' with '/w'
+  GlslangToSpv.cpp
+  InReadableOrder.cpp
+  Logger.cpp
+  SpvBuilder.cpp
+  SPVRemapper.cpp
+  doc.cpp
+  disassemble.cpp
+  Generating Code...
+  SPIRV.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\SPIRV\Debug\SPIRVd.lib

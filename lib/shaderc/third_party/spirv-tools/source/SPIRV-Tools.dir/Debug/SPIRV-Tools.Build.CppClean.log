@@ -1,0 +1,83 @@
+d:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.pdb
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.pdb
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_layout.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_instruction.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_id.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_cfg.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\text_handler.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\text.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\table.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv_target_env.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv_endian.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\software_version.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\print.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\operand.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\opcode.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\instruction.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\ext_inst.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\disassemble.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\diagnostic.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\binary.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\assembly_grammar.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validationstate.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\function.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\construct.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\basicblock.obj
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_ssa.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.pdb
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_layout.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_instruction.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_id.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_cfg.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\text_handler.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\text.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\table.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv_target_env.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv_endian.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\software_version.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\print.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\operand.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\opcode.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\instruction.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\ext_inst.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\disassemble.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\diagnostic.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\binary.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\assembly_grammar.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validationstate.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\function.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\construct.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\basicblock.obj
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\validate_ssa.obj
+d:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\source\cmakefiles\generate.stamp
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\cmakefiles\generate.stamp
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\build-version.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\cmakefiles\generate.stamp
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc
+d:\projects\pipeline layout editor\lib\shaderc\third_party\spirv-tools\source\debug\spirv-tools.lib
+d:\projects\spirv viewer\lib\shaderc\third_party\spirv-tools\source\debug\spirv-tools.lib
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\debug\spirv-tools.lib
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\debug\spirv-tools.pdb
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\cl.command.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\cl.read.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\cl.write.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\custombuild.command.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\custombuild.read.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\custombuild.write.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\lib-link.read.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\lib-link.write.1.tlog
+c:\users\ziyad\documents\spirv-viewer\lib\shaderc\third_party\spirv-tools\source\spirv-tools.dir\debug\spirv-tools.tlog\lib.command.1.tlog

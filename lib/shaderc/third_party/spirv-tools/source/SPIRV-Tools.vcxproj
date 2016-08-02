@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{6CB68859-2D8E-332A-9498-721207DBE1A3}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>SPIRV-Tools</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SPIRV-Tools.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SPIRV-Tools</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SPIRV-Tools.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SPIRV-Tools</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SPIRV-Tools.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SPIRV-Tools</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SPIRV-Tools.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SPIRV-Tools</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -w %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -w %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -w %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -w %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;SPIRV_WINDOWS;SPIRV_COLOR_TERMINAL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\spirv-headers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\opencl.std.insts-1.0.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate info tables for OpenCL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-opencl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/extinst-1.0.opencl.std.grammar.json --opencl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/opencl.std.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/opencl.std.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\extinst-1.0.opencl.std.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate info tables for OpenCL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-opencl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/extinst-1.0.opencl.std.grammar.json --opencl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/opencl.std.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/opencl.std.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\extinst-1.0.opencl.std.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generate info tables for OpenCL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-opencl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/extinst-1.0.opencl.std.grammar.json --opencl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/opencl.std.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/opencl.std.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\extinst-1.0.opencl.std.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generate info tables for OpenCL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-opencl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/extinst-1.0.opencl.std.grammar.json --opencl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/opencl.std.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/opencl.std.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\extinst-1.0.opencl.std.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\opencl.std.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\glsl.std.450.insts-1.0.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate info tables for GLSL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-glsl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/glsl.std.450.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/glsl.std.450.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate info tables for GLSL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-glsl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/glsl.std.450.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/glsl.std.450.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generate info tables for GLSL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-glsl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/glsl.std.450.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/glsl.std.450.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generate info tables for GLSL extended instructions and operands v1.0.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --extinst-glsl-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/extinst.glsl.std.450.grammar.json --glsl-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/glsl.std.450.insts-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/glsl.std.450.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\extinst.glsl.std.450.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\glsl.std.450.insts-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\core.insts-1.0.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate info tables for SPIR-V v1.0 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.0.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate info tables for SPIR-V v1.0 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.0.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generate info tables for SPIR-V v1.0 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.0.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generate info tables for SPIR-V v1.0 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.0/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.0.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.0.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.0.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.0\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.0.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.0.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\core.insts-1.1.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate info tables for SPIR-V v1.1 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.1/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.1.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.1.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.1.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.1\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate info tables for SPIR-V v1.1 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.1/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.1.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.1.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.1.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.1\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generate info tables for SPIR-V v1.1 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.1/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.1.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.1.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.1.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.1\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generate info tables for SPIR-V v1.1 core instructions and operands.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/generate_grammar_tables.py --spirv-core-grammar=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/external/spirv-headers/include/spirv/1.1/spirv.core.grammar.json --core-insts-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/core.insts-1.1.inc --operand-kinds-output=C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/operand.kinds-1.1.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/core.insts-1.1.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\generate_grammar_tables.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\external\SPIRV-Headers\include\spirv\1.1\spirv.core.grammar.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\core.insts-1.1.inc;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\operand.kinds-1.1.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\build-version.inc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Update build-version.inc in the SPIRV-Tools build directory (if necessary).</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\ziyad\AppData\Local\Programs\Python\Python35-32\python.exe C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/utils/update_build_version.py C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/build-version.inc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/CMakeFiles/d01955706e96abb87325cf3387aeff86/build-version.inc.rule;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\utils\update_build_version.py;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\CHANGES;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\build-version.inc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include\spirv-tools\libspirv.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\util\bitutils.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\util\hex_float.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\assembly_grammar.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\binary.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\diagnostic.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\ext_inst.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\instruction.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\macro.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\opcode.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\operand.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\print.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_constant.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_definition.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_endian.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_target_env.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\table.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text_handler.h" />
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate.h" />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\assembly_grammar.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\binary.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\diagnostic.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\disassemble.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\ext_inst.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\instruction.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\opcode.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\operand.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\print.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\software_version.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_endian.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_target_env.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\table.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text_handler.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_cfg.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_id.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_instruction.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_layout.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_ssa.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\BasicBlock.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\Construct.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\Function.cpp"  />
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\ValidationState.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/ZERO_CHECK.vcxproj">
+      <Project>8DED3C34-0952-3BE9-926E-5DDEC53147D2</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

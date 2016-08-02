@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (glslang-default-resource-limits.dir\Debug\) contains files shared from another project (glslang-default-resource-limits.vcxproj, glslang-default-resource-limits.vcxproj, glslang-default-resource-limits.vcxproj, glslang-default-resource-limits.vcxproj, glslang-default-resource-limits.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/StandAlone/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\StandAlone\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W3' with '/w'
+  ResourceLimits.cpp
+  glslang-default-resource-limits.vcxproj -> C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\glslang\StandAlone\Debug\glslang-default-resource-limitsd.lib

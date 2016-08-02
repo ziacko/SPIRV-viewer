@@ -1,0 +1,10 @@
+D:/projects/glslang/hlsl/CMakeFiles/HLSL.dir
+D:/projects/glslang/StandAlone/CMakeFiles/glslangValidator.dir
+D:/projects/glslang/OGLCompilersDLL/CMakeFiles/OGLCompiler.dir
+D:/projects/glslang/StandAlone/CMakeFiles/glslang-default-resource-limits.dir
+D:/projects/glslang/glslang/OSDependent/Windows/CMakeFiles/OSDependent.dir
+D:/projects/glslang/CMakeFiles/ALL_BUILD.dir
+D:/projects/glslang/StandAlone/CMakeFiles/spirv-remap.dir
+D:/projects/glslang/SPIRV/CMakeFiles/SPIRV.dir
+D:/projects/glslang/glslang/CMakeFiles/glslang.dir
+D:/projects/glslang/CMakeFiles/ZERO_CHECK.dir

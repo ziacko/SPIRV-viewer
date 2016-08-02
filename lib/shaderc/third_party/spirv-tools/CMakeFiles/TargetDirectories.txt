@@ -1,0 +1,7 @@
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/tools/CMakeFiles/spirv-as.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/source/CMakeFiles/SPIRV-Tools.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/CMakeFiles/ALL_BUILD.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/tools/CMakeFiles/spirv-dis.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/tools/CMakeFiles/spirv-val.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/CMakeFiles/ZERO_CHECK.dir
+D:/projects/pipeline layout editor/lib/shaderc/third_party/spirv-tools/source/CMakeFiles/spirv-tools-build-version.dir

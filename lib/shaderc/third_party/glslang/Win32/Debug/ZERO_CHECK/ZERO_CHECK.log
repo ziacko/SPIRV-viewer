@@ -1,0 +1,10 @@
+﻿  Checking Build System
+  CMake does not need to re-run because D:/projects/glslang/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/External/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/glslang/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/glslang/OSDependent/Windows/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/OGLCompilersDLL/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/StandAlone/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/SPIRV/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/hlsl/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because D:/projects/glslang/gtests/CMakeFiles/generate.stamp is up-to-date.

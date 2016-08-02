@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3FD9DBBE-5D57-31E9-9E91-82EA9ECEC3E9}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>shaderc_util_mutex_test</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shaderc_util_mutex_test.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shaderc_util_mutex_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">shaderc_util_mutex_test.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">shaderc_util_mutex_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">shaderc_util_mutex_test.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">shaderc_util_mutex_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">shaderc_util_mutex_test.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">shaderc_util_mutex_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CURRENT_DIR="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CURRENT_DIR=\"C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Debug\shaderc_util.lib;..\third_party\googletest\googlemock\Debug\gmock.lib;..\third_party\googletest\googlemock\gtest\Debug\gtest_main.lib;..\third_party\glslang\glslang\Debug\glslangd.lib;..\third_party\glslang\glslang\OSDependent\Windows\Debug\OSDependentd.lib;..\third_party\glslang\OGLCompilersDLL\Debug\OGLCompilerd.lib;..\third_party\glslang\hlsl\Debug\HLSLd.lib;..\third_party\glslang\SPIRV\Debug\SPIRVd.lib;..\third_party\spirv-tools\source\Debug\SPIRV-Tools.lib;..\third_party\googletest\googlemock\gtest\Debug\gtest.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/Debug/shaderc_util_mutex_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/Debug/shaderc_util_mutex_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR=\"C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Release\shaderc_util.lib;..\third_party\googletest\googlemock\Release\gmock.lib;..\third_party\googletest\googlemock\gtest\Release\gtest_main.lib;..\third_party\glslang\glslang\Release\glslang.lib;..\third_party\glslang\glslang\OSDependent\Windows\Release\OSDependent.lib;..\third_party\glslang\OGLCompilersDLL\Release\OGLCompiler.lib;..\third_party\glslang\hlsl\Release\HLSL.lib;..\third_party\glslang\SPIRV\Release\SPIRV.lib;..\third_party\spirv-tools\source\Release\SPIRV-Tools.lib;..\third_party\googletest\googlemock\gtest\Release\gtest.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/Release/shaderc_util_mutex_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/Release/shaderc_util_mutex_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util";CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR=\"C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util\";CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;MinSizeRel\shaderc_util.lib;..\third_party\googletest\googlemock\MinSizeRel\gmock.lib;..\third_party\googletest\googlemock\gtest\MinSizeRel\gtest_main.lib;..\third_party\glslang\glslang\MinSizeRel\glslang.lib;..\third_party\glslang\glslang\OSDependent\Windows\MinSizeRel\OSDependent.lib;..\third_party\glslang\OGLCompilersDLL\MinSizeRel\OGLCompiler.lib;..\third_party\glslang\hlsl\MinSizeRel\HLSL.lib;..\third_party\glslang\SPIRV\MinSizeRel\SPIRV.lib;..\third_party\spirv-tools\source\MinSizeRel\SPIRV-Tools.lib;..\third_party\googletest\googlemock\gtest\MinSizeRel\gtest.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/MinSizeRel/shaderc_util_mutex_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/MinSizeRel/shaderc_util_mutex_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util";CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CURRENT_DIR=\"C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util\";CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ziyad\Documents\SPIRV-viewer\.\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\imgui;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\shaderc\libshaderc\include;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\cross;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\GL;C:\Users\ziyad\Documents\SPIRV-viewer\.\lib\include\glfw;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googlemock\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\googletest\googletest\include;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;RelWithDebInfo\shaderc_util.lib;..\third_party\googletest\googlemock\RelWithDebInfo\gmock.lib;..\third_party\googletest\googlemock\gtest\RelWithDebInfo\gtest_main.lib;..\third_party\glslang\glslang\RelWithDebInfo\glslang.lib;..\third_party\glslang\glslang\OSDependent\Windows\RelWithDebInfo\OSDependent.lib;..\third_party\glslang\OGLCompilersDLL\RelWithDebInfo\OGLCompiler.lib;..\third_party\glslang\hlsl\RelWithDebInfo\HLSL.lib;..\third_party\glslang\SPIRV\RelWithDebInfo\SPIRV.lib;..\third_party\spirv-tools\source\RelWithDebInfo\SPIRV-Tools.lib;..\third_party\googletest\googlemock\gtest\RelWithDebInfo\gtest.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/RelWithDebInfo/shaderc_util_mutex_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/RelWithDebInfo/shaderc_util_mutex_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/ziyad/Documents/SPIRV-viewer -BC:/Users/ziyad/Documents/SPIRV-viewer --check-stamp-file C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/CMakeLists.txt;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\libshaderc_util\src\mutex_test.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/ZERO_CHECK.vcxproj">
+      <Project>8DED3C34-0952-3BE9-926E-5DDEC53147D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/hlsl/HLSL.vcxproj">
+      <Project>CCFF8927-0043-3205-98CF-873F9E264FF8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/OGLCompilersDLL/OGLCompiler.vcxproj">
+      <Project>6DB7BAA1-BB6D-367A-999E-AAB8F1901C5F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/glslang/OSDependent/Windows/OSDependent.vcxproj">
+      <Project>AB350629-FF5D-3124-AAF5-49A32EF485DB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/SPIRV/SPIRV.vcxproj">
+      <Project>116F9F34-CCD2-3CC6-858C-4134689DE0D9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/spirv-tools/source/SPIRV-Tools.vcxproj">
+      <Project>6CB68859-2D8E-332A-9498-721207DBE1A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/glslang/glslang/glslang.vcxproj">
+      <Project>EA643AE1-280E-3282-853F-C4DB019B6E7A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/googletest/googlemock/gmock.vcxproj">
+      <Project>A7CDF6F4-3990-3E87-922C-DBA9D67C4D76</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/googletest/googlemock/gtest/gtest.vcxproj">
+      <Project>A234871E-27AB-3958-AFB0-D6B1D2C04D01</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/third_party/googletest/googlemock/gtest/gtest_main.vcxproj">
+      <Project>4DE1C94D-4A90-31F5-8414-1A790C1F9024</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/ziyad/Documents/SPIRV-viewer/lib/shaderc/libshaderc_util/shaderc_util.vcxproj">
+      <Project>72BE1487-F179-3A03-A45D-06F4B7C5A980</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

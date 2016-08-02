@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\pipeline layout editor\lib\shaderc\CMakeFiles\9429fa00ba7d0ccbd60e2e2d5f6f0596\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3AEBA857-1B4A-3C80-A81B-57DF0B68E949}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

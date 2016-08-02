@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\assembly_grammar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\binary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\diagnostic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\disassemble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\ext_inst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\opcode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\operand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\print.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\software_version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_endian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_target_env.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_cfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate_ssa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\BasicBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\Construct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\Function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\val\ValidationState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\include\spirv-tools\libspirv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\util\bitutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\util\hex_float.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\assembly_grammar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\binary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\diagnostic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\ext_inst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\opcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\operand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\print.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_constant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_definition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\spirv_target_env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\text_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\validate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\third_party\spirv-tools\source\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\opencl.std.insts-1.0.inc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\glsl.std.450.insts-1.0.inc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\core.insts-1.0.inc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\core.insts-1.1.inc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\d01955706e96abb87325cf3387aeff86\build-version.inc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DAEB56E6-7EC3-3691-9A77-2119D1D9D2D8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{00CB29F0-C2FB-3FCF-BBD6-A7BB08FF4C95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A50158D9-8229-38AD-B977-10F18415856C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

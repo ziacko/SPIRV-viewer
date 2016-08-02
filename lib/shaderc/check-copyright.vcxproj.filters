@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\2b546962ee01b39a8be8063d67d6c655\check-copyright.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\ziyad\Documents\SPIRV-viewer\lib\shaderc\CMakeFiles\check-copyright" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A50158D9-8229-38AD-B977-10F18415856C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

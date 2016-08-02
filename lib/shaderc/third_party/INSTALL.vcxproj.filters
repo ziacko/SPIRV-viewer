@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ziyad\Documents\SPIRV-viewer\CMakeFiles\627a4c6ef56aee32bc41ec19a03e2b31\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A50158D9-8229-38AD-B977-10F18415856C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
