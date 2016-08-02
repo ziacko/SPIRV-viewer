@@ -156,7 +156,7 @@ int main(int numArgs, char* arguments[])
     bool showDebugTestWindow = false;
 
     while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
+        glfwWaitEvents();
         ImGui_ImplGlfwGL3_NewFrame();
         glfwGetFramebufferSize(window, &fbSizeW, &fbSizeH);
 
